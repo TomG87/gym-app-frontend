@@ -4,6 +4,9 @@ import { ExercisesIndex } from "./ExercisesIndex";
 import { ExercisesShow } from "./ExercisesShow";
 import { Routes, Route } from "react-router-dom";
 import { Modal } from "./Modal";
+import { Signup } from "./Signup";
+import { Login } from "./Login";
+import { LogoutLink } from "./LogoutLink";
 
 export function Content() {
   const [exercises, setExercises] = useState([]);
@@ -36,7 +39,11 @@ export function Content() {
 
       <Routes>
         <Route path="/" element={<ExercisesIndex exercises={exercises} onShowExercise={handleShowExercise}/>} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/logout" element={<LogoutLink />} />
 
+      
       </Routes>
       <br />
       <br />
