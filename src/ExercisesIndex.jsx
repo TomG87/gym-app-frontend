@@ -1,15 +1,18 @@
+import YouTube from 'react-youtube';
+import React from "react";
+import { useState } from "react";
+
 export function ExercisesIndex(props) {
   return (
-    <div>
+    <div id="exercises-index">
       <h1>Exercises</h1>
       {props.exercises.map((exercise) => (
         <div key={exercise.id}>
-          <p>Exercise: {exercise.name}</p>
-          <p>Description: {exercise.description}</p>
+          <h3>{exercise.name}</h3>
           <img src={exercise.image_url} />
-          <video src={exercise.video_url} />
-          </div>
-          ))}
+          <button onClick={() => props.onShowExercise(exercise)}>More Details</button>
+        </div>
+        ))}
     </div>
   );
 }
