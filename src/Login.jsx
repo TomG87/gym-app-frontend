@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const jwt = localStorage.getItem("jwt");
 if (jwt) {
@@ -16,7 +17,7 @@ export function Login() {
     axios
       .post("http://localhost:3000/sessions.json", params)
       .then((response) => {
-      localStorage.setItem("jwt", response.data);
+      localStorage.setItem("jwt", response.data.jwt);
       event.target.reset();
       window.location.href = "/";
       })
@@ -43,6 +44,10 @@ export function Login() {
         </div>
         <button type="submit">Login</button>
       </form>
+      <div>
+        <Link to="/signup">Click the link to signup</Link>
+        </div>
     </div>
   );
+  
 }
