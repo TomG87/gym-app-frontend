@@ -27,11 +27,11 @@ export function Header() {
   return (
     <header>
       <nav>
-        <a href="/"><CgHomeAlt />Home</a> |
-        <a href="/routines"><GiWeightLiftingUp />My Routines</a> |
-        <a href="/login"><BiLogIn />Login</a> |
+        <a href="/"><CgHomeAlt size={30}/>Home</a> |
+        <a href="/routines"><GiWeightLiftingUp size={30}/>My Routines</a> |
+        <a href="/login"><BiLogIn size={30}/>Login</a> |
         <a href="/logout" onClick={handleClick}>
-       <BiLogOut /> Logout</a>
+       <BiLogOut size={30}/> Logout</a>
       </nav>
     </header>
   );

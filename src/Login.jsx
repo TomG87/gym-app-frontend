@@ -45,7 +45,7 @@ export function Login() {
         <button type="submit">Login</button>
       </form>
       <div>
-        <Link to="/signup">Click the link to signup</Link>
+        <Link to="/signup">Click here to signup</Link>
         </div>
     </div>
   );

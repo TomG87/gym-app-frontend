@@ -4,6 +4,9 @@ import { useState } from "react";
 export function ExercisesIndex(props) {
   return (
     <div id="exercises-index">
+      <br />
+      <br />
+      <br />
       <h1>Exercises</h1>
       <div className="card-container">
         {props.exercises.map((exercise) => (
