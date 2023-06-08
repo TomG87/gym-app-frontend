@@ -6,6 +6,7 @@ export function ExercisesShow(props) {
   const [showAlert, setShowAlert] = useState(false);
   
   const handleAddToRoutine = (event) => {
+    alert('Please login to add exercise')
     event.preventDefault();
   
     const params = new FormData(event.target);
