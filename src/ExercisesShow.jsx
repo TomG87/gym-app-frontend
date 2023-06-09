@@ -4,9 +4,9 @@ import axios from 'axios';
 
 export function ExercisesShow(props) {
   const [showAlert, setShowAlert] = useState(false);
+  const [exerciseAdded, setExerciseAdded] = useState(false);
   
   const handleAddToRoutine = (event) => {
-    alert('Please login to add exercise')
     event.preventDefault();
   
     const params = new FormData(event.target);
@@ -16,11 +16,11 @@ export function ExercisesShow(props) {
       .then((response) => {
         console.log(response.data);
         // Handle successful response, e.g., show a success message
+        setExerciseAdded(true); // Set exerciseAdded to true
       })
       .catch((error) => {
         console.error('User needs to be logged in:', error);
         setShowAlert(true);
-
       });
   };
 
@@ -44,11 +44,19 @@ export function ExercisesShow(props) {
         </div>
         <button type="submit">Add to routine</button>
       </form>
-        {showAlert && (
-        <div className="alert">
-        You must be logged in to add an exercise to your routine.
+      
+  
+      {showAlert && !exerciseAdded && (
+        <div className="alert-bad">
+          You must be logged in to add an exercise to your routine.
         </div>
-       )}
+      )}
+    
+      {exerciseAdded && (
+        <div className="alert">
+          Exercise added successfully!
+        </div>
+      )}
     </div>
   );
 }
