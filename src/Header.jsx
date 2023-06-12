@@ -4,6 +4,7 @@ import { CgHomeAlt } from "react-icons/cg";
 import { GiWeightLiftingUp } from "react-icons/gi";
 import { BiLogIn } from "react-icons/bi";
 import { BiLogOut } from "react-icons/bi";
+import { IoIosFitness } from "react-icons/io";
 
 export function Header() {
   let authenticationLinks;
@@ -27,11 +28,12 @@ export function Header() {
   return (
     <header>
       <nav>
-        <a href="/"><CgHomeAlt size={30}/>Home</a> |
-        <a href="/routines"><GiWeightLiftingUp size={30}/>My Routines</a> |
-        <a href="/login"><BiLogIn size={30}/>Login</a> |
+        <a href="/"><CgHomeAlt size={35}/>Home</a> |
+        <a href="/routines"><GiWeightLiftingUp size={35}/>My Routines</a> |
+        <a href="/other"><IoIosFitness size={42}/>Additional Exercises</a> |
+        <a href="/login"><BiLogIn size={35}/>Login</a> |
         <a href="/logout" onClick={handleClick}>
-       <BiLogOut size={30}/> Logout</a>
+       <BiLogOut size={34}/> Logout</a>
       </nav>
     </header>
   );

@@ -8,6 +8,7 @@ import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
 import { RoutinesIndex } from "./RoutinesIndex";
+import { OtherExercises } from "./OtherExercises";
 
 export function Content() {
   const [exercises, setExercises] = useState([]);
@@ -46,12 +47,14 @@ export function Content() {
     setIsExercisesShowVisible(false);
   }
 
+
   return (
     <div className="container">
 
       <Routes>
         <Route path="/" element={<ExercisesIndex exercises={exercises} onShowExercise={handleShowExercise} />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/other" element={<OtherExercises />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<LogoutLink />} />
         <Route path="/routines" element={<RoutinesIndex routines={routines} />} />

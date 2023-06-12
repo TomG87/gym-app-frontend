@@ -45,10 +45,10 @@ export function RoutinesIndex(props) {
         {props.routines.map((routine) => (
           <div key={routine.id} className="card">
             <div className="card-body">
-              <h3 className="card-title">Name: {routine.user.name}</h3>
-              <p className="card-text">Exercise: {routine.exercise.name}</p>
+            <h3 className="card-title">{`${routine.user.name}'s Exercise`}</h3>
+              <h4 className="card-text">Exercise: {routine.exercise.name}</h4>
               <img src={routine.exercise.image_url} className="card-img-top" alt="Exercise" />
-              <p className="card-text">Repetitions: {routine.repetitions} for sets of 3</p>
+              <h5 className="card-text">Repetitions: {routine.repetitions} for sets of 3</h5>
             </div>
           </div>
         ))}
